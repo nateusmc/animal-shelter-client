@@ -1,14 +1,11 @@
 import {
     FETCH_DOGS_REQUEST,
     FETCH_DOGS_SUCCESS,
-    FETCH_DOGS_ERROR
-} from '../actions/dogs';
-
-import {
+    FETCH_DOGS_ERROR,
     FETCH_CATS_REQUEST,
     FETCH_CATS_SUCCESS,
     FETCH_CATS_ERROR
-} from '../actions/cats';
+} from '../actions/pets';
 
 const initialState = {
   cats: {},

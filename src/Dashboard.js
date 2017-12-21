@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { store } from './store';
 import { fetchCat } from './actions/cats';
 import { fetchDog } from './actions/dogs';
 import './Dashboard.css';
@@ -27,7 +26,7 @@ export class Dashboard extends Component {
         <h2>Cats</h2>
         <h3>{catName}</h3>
         <div>
-          <img src={catImage}/>
+          <img src={catImage} alt="fluffyCat"/>
         </div>
       </div>
 
@@ -35,13 +34,18 @@ export class Dashboard extends Component {
         <h2>Dogs</h2>
         <h3>{dogName}</h3>
         <div>
-          <img src={dogImage}/>
+          <img src={dogImage} alt="zeusDog"/>
         </div>
       </div>
     </div>);
   }
 }
 
-const mapStateToProps = state => ({ cats: state.cats, dogs: state.dogs, loading: state.loading, error: state.error });
+const mapStateToProps = state => ({
+    cats: state.cats,
+    dogs: state.dogs,
+    loading: state.loading,
+    error: state.error,
+  });
 
 export default connect(mapStateToProps)(Dashboard);
