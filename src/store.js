@@ -1,11 +1,6 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import { petsReducer } from './reducers/pets';
 
-const store = createStore(
-    petsReducer,
-    applyMiddleware(thunk));
+import reducer from './reducers/';
 
-store.getState();
-
-export default store;
+export default createStore(reducer, applyMiddleware(thunk));
