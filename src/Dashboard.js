@@ -14,34 +14,62 @@ export class Dashboard extends Component {
     console.log(this.props);
     const dogName = this.props.dogs.name;
     const dogImage = this.props.dogs.imageURL;
+    const dogSex = this.props.dogs.sex;
+    const dogAge = this.props.dogs.age;
+    const dogBreed = this.props.dogs.breed;
+    const dogStory = this.props.dogs.story;
 
     const catName = this.props.cats.name;
     const catImage = this.props.cats.imageURL;
+    const catSex = this.props.cats.sex;
+    const catAge = this.props.cats.age;
+    const catBreed = this.props.cats.breed;
+    const catStory = this.props.cats.story;
 
-    return (<div>
+    return (<div className="main">
 
-      <h1>Animal Shelter</h1>
+
       <div className="cats">
-        <h2>Cats</h2>
-        <h3>{catName}</h3>
+        <h1>{catName}</h1>
         <div>
-          <img src={catImage} alt="fluffyCat"/>
+          <img className="fluffyCatImg" src={catImage} alt="fluffyCat"/>
         </div>
+        <h2>More About Fluffy</h2>
+          <dl>
+            <dt>Sex</dt>
+            <dd>{catSex}</dd>
+            <dt>Age</dt>
+            <dd>{catAge}</dd>
+            <dt>Breed</dt>
+            <dd>{catBreed}</dd>
+            <dt>Story</dt>
+            <dd>{catStory}</dd>
+          </dl>
         <div>
           <button type="submit">Adopt</button>
         </div>
       </div>
 
       <div className="dogs">
-        <h2>Dogs</h2>
-        <h3>{dogName}</h3>
+        <h1>{dogName}</h1>
         <div>
-          <img src={dogImage} alt="zeusDog"/>
+          <img className="zeusDogImg" src={dogImage} alt="zeusDog"/>
         </div>
-      </div>
+        <h2>More About Zeus</h2>
+        <dl>
+          <dt>Sex</dt>
+          <dd>{dogSex}</dd>
+          <dt>Age</dt>
+          <dd>{dogAge}</dd>
+          <dt>Breed</dt>
+          <dd>{dogBreed}</dd>
+          <dt>Story</dt>
+          <dd>{dogStory}</dd>
+        </dl>
       <div>
         <button type="submit">Adopt</button>
       </div>
+    </div>
 
     </div>);
   }

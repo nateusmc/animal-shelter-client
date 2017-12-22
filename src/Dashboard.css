@@ -1,0 +1,52 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.main {
+  padding-left: 200px;
+  display: inline-block;
+}
+
+.cats {
+  display: inline-block;
+  padding-right: 50px;
+}
+
+.fluffyCatImg {
+  height: 300px;
+  width: 600px;
+}
+
+.zeusDogImg {
+  height: 300px;
+  width: 600px;
+}
+
+.dogs {
+  display: inline-block;
+}
+
+dl dt {
+  display: block;
+  line-height: 1.2;
+}
+
+dt {
+  font-weight: 700;
+  font-size: 125%;
+  display: block;
+}
+
+dt:after {
+  content: ":";
+}
+
+dd {
+  margin: 0;
+  padding-bottom: 20px;
+  font-size: 125%;
+}
+
+button {
+  font-size: 150%;
+}
