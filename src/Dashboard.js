@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchCat } from './actions/cats';
-import { fetchDog } from './actions/dogs';
+import { fetchCat, fetchDog } from './actions/pets';
 import './Dashboard.css';
 
 export class Dashboard extends Component {
@@ -20,13 +19,16 @@ export class Dashboard extends Component {
     const catImage = this.props.cats.imageURL;
 
     return (<div>
-      <h1>Animal Shelter</h1>
 
+      <h1>Animal Shelter</h1>
       <div className="cats">
         <h2>Cats</h2>
         <h3>{catName}</h3>
         <div>
           <img src={catImage} alt="fluffyCat"/>
+        </div>
+        <div>
+          <button type="submit">Adopt</button>
         </div>
       </div>
 
@@ -37,6 +39,10 @@ export class Dashboard extends Component {
           <img src={dogImage} alt="zeusDog"/>
         </div>
       </div>
+      <div>
+        <button type="submit">Adopt</button>
+      </div>
+
     </div>);
   }
 }
