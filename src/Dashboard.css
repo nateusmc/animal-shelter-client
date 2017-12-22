@@ -50,3 +50,7 @@ dd {
 button {
   font-size: 150%;
 }
+
+.age:after {
+  content: " Years"
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchCat, fetchDog } from './actions/pets';
+import { fetchCat } from './actions/cats';
+import { fetchDog } from './actions/dogs';
 import './Dashboard.css';
 
 export class Dashboard extends Component {
@@ -26,7 +27,8 @@ export class Dashboard extends Component {
     const catBreed = this.props.cats.breed;
     const catStory = this.props.cats.story;
 
-    return (<div className="main">
+    return (
+      <div className="main">
 
 
       <div className="cats">
@@ -39,7 +41,7 @@ export class Dashboard extends Component {
             <dt>Sex</dt>
             <dd>{catSex}</dd>
             <dt>Age</dt>
-            <dd>{catAge}</dd>
+            <dd className="age">{catAge}</dd>
             <dt>Breed</dt>
             <dd>{catBreed}</dd>
             <dt>Story</dt>
@@ -60,7 +62,7 @@ export class Dashboard extends Component {
           <dt>Sex</dt>
           <dd>{dogSex}</dd>
           <dt>Age</dt>
-          <dd>{dogAge}</dd>
+          <dd className="age">{dogAge}</dd>
           <dt>Breed</dt>
           <dd>{dogBreed}</dd>
           <dt>Story</dt>
@@ -71,7 +73,9 @@ export class Dashboard extends Component {
       </div>
     </div>
 
-    </div>);
+    </div>
+    );
+
   }
 }
 
